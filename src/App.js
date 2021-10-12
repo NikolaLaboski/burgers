@@ -10,10 +10,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename = {process.env.PUBLIC_URL}
+>
         <Navbar />
         <Switch>
-          <Route path="/home" exact component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/menu" exact component={Menu} />
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
